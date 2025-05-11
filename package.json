@@ -1,12 +1,15 @@
 {
+  "homepage": "https://aniketkachhadiya.github.io/profology",
   "name": "next-latest",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+  "dev": "next dev",
+  "build": "next build && next export",
+  "start": "next start",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d out",
+  "lint": "next lint"
+},
   "dependencies": {
     "@headlessui/react": "^1.7.2",
     "axios": "^0.27.2",
